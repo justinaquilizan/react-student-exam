@@ -1,0 +1,102 @@
+/* Table Row Styles */
+.student-row {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.student-row:hover {
+  background-color: var(--soft-pink);
+}
+
+.student-row.deleting {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.student-row td {
+  padding: 1rem;
+  vertical-align: middle;
+}
+
+.student-id {
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  width: 80px;
+}
+
+.student-name {
+  font-weight: 700;
+  color: var(--text-main);
+  font-size: 1rem;
+  min-width: 200px;
+}
+
+.student-course {
+  color: var(--primary-pink);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.student-year {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  text-align: center;
+  width: 80px;
+}
+
+.student-email {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  min-width: 250px;
+}
+
+.student-actions {
+  width: 120px;
+  text-align: center;
+}
+
+.student-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-action {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+}
+
+.btn-action:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.btn-edit {
+  color: var(--primary-pink);
+}
+
+.btn-edit:hover:not(:disabled) {
+  background-color: var(--soft-pink);
+  transform: scale(1.1);
+}
+
+.btn-delete {
+  color: var(--danger-red);
+}
+
+.btn-delete:hover:not(:disabled) {
+  background-color: #FEE2E2;
+  transform: scale(1.1);
+}

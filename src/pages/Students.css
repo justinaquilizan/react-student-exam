@@ -1,0 +1,228 @@
+.students-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.students-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.students-container h1 {
+  color: var(--primary-pink);
+  font-weight: 700;
+  margin: 0;
+}
+
+.btn-add-student {
+  background-color: var(--primary-pink);
+  color: var(--bg-white);
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: var(--card-shadow);
+}
+
+.btn-add-student:hover {
+  background-color: var(--hover-pink);
+  transform: translateY(-2px);
+  box-shadow: 0 15px 20px -5px rgba(214, 51, 108, 0.2);
+}
+
+
+/* Alert Messages */
+.alert {
+  padding: 1rem 1.5rem;
+  border-radius: 6px;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideIn 0.3s ease-out;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.alert-error {
+  background-color: #FEE2E2;
+  border: 1px solid #FECACA;
+  color: #DC2626;
+}
+
+.alert-success {
+  background-color: #D1FAE5;
+  border: 1px solid #A7F3D0;
+  color: #059669;
+}
+
+.alert-close {
+  background: none;
+  border: none;
+  color: inherit;
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 1rem;
+  line-height: 1;
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.alert-close:hover {
+  opacity: 1;
+}
+
+/* Loading State */
+.loading {
+  text-align: center;
+  padding: 3rem 2rem;
+  color: var(--text-light);
+}
+
+.loading p {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+}
+
+.spinner {
+  border: 4px solid var(--soft-pink);
+  border-top: 4px solid var(--primary-pink);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.error-state {
+  text-align: center;
+  padding: 3rem 2rem;
+}
+
+.error-message {
+  color: var(--danger-red);
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn-retry {
+  background-color: var(--primary-pink);
+  color: var(--bg-white);
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-weight: 600;
+}
+
+.btn-retry:hover {
+  background-color: var(--hover-pink);
+  transform: translateY(-2px);
+}
+
+/* Empty State */
+.no-students {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  border: 2px dashed var(--soft-pink);
+  font-weight: 500;
+}
+
+.no-students p {
+  margin: 0;
+}
+
+/* Table Container */
+.table-container {
+  background: var(--bg-white);
+  border-radius: var(--radius);
+  box-shadow: var(--card-shadow);
+  overflow: hidden;
+  overflow-x: auto;
+}
+
+.students-table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.students-table thead {
+  background: linear-gradient(to bottom, var(--soft-pink), var(--bg-white));
+  border-bottom: 3px solid var(--primary-pink);
+}
+
+.students-table th {
+  padding: 1rem;
+  text-align: left;
+  font-weight: 700;
+  color: var(--primary-pink);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 2px solid var(--primary-pink);
+}
+
+.students-table th:first-child {
+  padding-left: 1.5rem;
+}
+
+.students-table th:last-child {
+  text-align: center;
+  padding-right: 1.5rem;
+}
+
+.students-table tbody tr:last-child {
+  border-bottom: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .students-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .btn-add-student {
+    width: 100%;
+  }
+
+  .table-container {
+    border-radius: 0;
+    margin: 0 -2rem;
+  }
+
+  .students-table {
+    min-width: 100%;
+  }
+}
